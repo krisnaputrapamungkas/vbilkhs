@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Bilkhis Aisa Putri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        .font-script { font-family: 'Great Vibes', cursive; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-header { font-family: 'Cinzel', serif; }
+        .font-handwriting { font-family: 'Dancing Script', cursive; }
+        
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+        }
+
+        .paper-grain { position: relative; }
+        .paper-grain::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.05;
+            pointer-events: none;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            z-index: 10;
+        }
+
+        .textured-purple {
+            background-color: #8e44ad;
+            background-image: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+        }
+
+        .textured-beige {
+            background-color: #fdfaf5;
+            background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+        }
+
+        .polaroid {
+            background: white;
+            padding: 0.75rem 0.75rem 3rem 0.75rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .tape {
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(2px);
+            width: 80px;
+            height: 25px;
+            position: absolute;
+            z-index: 30;
+        }
+
+        .tape-edge {
+            clip-path: polygon(0% 0%, 100% 0%, 95% 50%, 100% 100%, 0% 100%, 5% 50%);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(2deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(2deg); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-page-entry { animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
